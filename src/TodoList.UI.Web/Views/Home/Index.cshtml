@@ -2,9 +2,47 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-left">
+    <h1 class="display-6">ToDo List</h1>
+</div>
+
+<div class="panel panel-default todo-panel">
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>&#x2714;</td>
+                <td>Item</td>
+                <td>Category</td>
+            </tr>
+        </thead>
+
+        <tr>
+            <td>
+                <form asp-action="MarkDone" method="POST">
+                    <input type="checkbox" class="done-checkbox">
+                    <input type="hidden" name="id">
+                </form>
+            </td>
+            <td>Create Documentation (sample)</td>
+            <td>Work</td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <form asp-action="MarkDone" method="POST">
+                    <input type="checkbox" class="done-checkbox">
+                    <input type="hidden" name="id">
+                </form>
+            </td>
+            <td>Trip to Japan (sample)</td>
+            <td>Holidays</td>
+
+        </tr>
+
+    </table>
+
 </div>
 
 

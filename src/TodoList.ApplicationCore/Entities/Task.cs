@@ -20,5 +20,7 @@ namespace TodoList.ApplicationCore.Entities
         public bool IsComplete { get; private set; }
         public Guid? CategoryId { get; private set; }
 
+        public virtual Category Category { get; private set; }
+
     }
 }
